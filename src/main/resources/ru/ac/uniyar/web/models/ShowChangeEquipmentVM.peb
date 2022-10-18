@@ -1,0 +1,17 @@
+    {% extends "./layout.peb" %}
+{% import "./util.peb   "%}
+    {% block content %}
+
+<div class="gird-x grid-padding-x">
+    <h1>Редактирование оборудования</h1>
+    <form method="POST" action="/equipment/{{model.equipment.id}}/change">
+        <input type="text" name="name" value="{{ model.equipment.name}}">
+        <input type="text" name="productId" value="{{ model.equipment.productId }}">
+        <input type="text" name="description" value="{{ model.equipment.description}}">
+        <input type="date" name="submissionDate" value="{{ model.equipment.submissionDate }}">
+        <input type="submit" class="button"  value="Изменить">
+    </form>
+</div>
+
+{% endblock %}
+

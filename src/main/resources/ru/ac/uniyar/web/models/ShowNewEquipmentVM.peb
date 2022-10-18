@@ -1,0 +1,18 @@
+    {% extends "./layout.peb" %}
+{% import "./util.peb   "%}
+    {% block content %}
+
+<div class="gird-x grid-padding-x">
+    <h1>Добавление оборудования</h1>
+    <form method="POST" action="/equipment/new">
+        {{ input("text", "name", model.webForm, "Название") }}
+        {{ input("text", "productId", model.webForm, "Номер") }}
+        {{ input("text", "description", model.webForm, "Описание") }}
+        {{ input("date", "submissionDate", model.webForm, "Дата приёма") }}
+        <div color="RED">{{ model.error }}</div>
+        <input type="submit"  class="button" value="Добавить">
+    </form>
+</div>
+
+{% endblock %}
+
