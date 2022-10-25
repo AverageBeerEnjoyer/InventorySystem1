@@ -9,6 +9,7 @@
         <input type="text" name="productId" value="{{ model.equipment.productId }}">
         <input type="text" name="description" value="{{ model.equipment.description}}">
         <input type="date" name="submissionDate" value="{{ model.equipment.submissionDate }}">
+        <div class="error">{{ model.error }}</div>
         <input type="submit" class="button"  value="Изменить">
     </form>
 </div>

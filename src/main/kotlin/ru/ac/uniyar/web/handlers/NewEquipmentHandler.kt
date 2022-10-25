@@ -25,7 +25,7 @@ class NewEquipmentHandler(
         val webform = Lenses.newEquipmentlens(request)
 
         if (webform.errors.isNotEmpty())
-            return Response(Status.OK).with(htmlView(request) of ShowNewEquipmentVM(webform))
+            return Response(Status.OK).with(htmlView(request) of ShowNewEquipmentVM(webform,"Заполните поля корректно"))
         val equipment = Equipment(
             UUID.randomUUID(),
             Lenses.nameFormLens(webform),

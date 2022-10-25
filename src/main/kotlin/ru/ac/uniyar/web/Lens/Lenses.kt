@@ -10,7 +10,7 @@ class Lenses {
         val nameFormLens = FormField.string().nonEmptyString().required("name")
         val productIdFormLens = FormField.string().nonEmptyString().required("productId")
         val descriptionIdFormLens = FormField.string().nonEmptyString().required("description")
-        val submissionDateIdFormLens = FormField.string().required("submissionDate")
+        val submissionDateIdFormLens = FormField.string().nonEmptyString().required("submissionDate")
         val newEquipmentlens = Body.webForm(
             Validator.Feedback,
             nameFormLens,

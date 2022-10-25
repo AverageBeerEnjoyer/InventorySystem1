@@ -1,5 +1,5 @@
     {% extends "./layout.peb" %}
-{% import "./util.peb   "%}
+        {% import "./util.peb"%}
     {% block content %}
 
 <div class="gird-x grid-padding-x">
@@ -9,7 +9,7 @@
         {{ input("text", "productId", model.webForm, "Номер") }}
         {{ input("text", "description", model.webForm, "Описание") }}
         {{ input("date", "submissionDate", model.webForm, "Дата приёма") }}
-        <div color="RED">{{ model.error }}</div>
+        <div class="error">{{ model.error }}</div>
         <input type="submit"  class="button" value="Добавить">
     </form>
 </div>

@@ -5,5 +5,5 @@ import ru.ac.uniyar.domain.storage.Equipment
 
 class ShowChangeEquipmentVM(
     val equipment: Equipment,
-    val error:String=""
+    val error: String = ""
 ) : ViewModel
